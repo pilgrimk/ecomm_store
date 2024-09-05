@@ -36,14 +36,11 @@ const ContactUs = () => {
 
   return (
     <div id='contact-us' >
-      <div>
-      <span className="h-1 w-3/4 mt-4 bg-accent-dark-100 lg:w-1/2"></span>
-          <p className='m-4 text-4xl italic'>{data.contactUsPage.title}</p>
-          <span className="h-1 w-3/4 mb-8 bg-accent-dark-100 lg:w-1/2"></span>        
-      </div>
-      {/* <Header title={data.contactUsPage.title} /> */}
       <div className='flex flex-col justify-center items-center'>
         <div className='flex flex-col max-w-5xl min-h-[45vh] justify-center items-center'>
+          <div>
+            <p className='m-4 text-4xl italic'>{data.contactUsPage.title}</p>
+          </div>
           {data.contactUsPage.description.map((desc) => (
             <p className='p-4'
               key={shortid.generate()}>
@@ -59,7 +56,7 @@ const ContactUs = () => {
               <label className='py-2 font-medium'>Email</label>
               <input className='border-2 rounded-md' type="email" name="user_email" ref={emailRef} required />
               <label className='py-2 font-medium'>Phone</label>
-              <input className='border-2 rounded-md' type="phone" name="user_phone" required />              
+              <input className='border-2 rounded-md' type="phone" name="user_phone" required />
               <label className='py-2 font-medium'>Message</label>
               <textarea className='min-h-40 border-2 rounded-md p-2' name="message" required />
               <button
